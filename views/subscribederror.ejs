@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%>
+
+<h1 class="HeaderText">Failure!</h1>
+<hr>
+
+<div class="text-center">
+  <div class="row">
+    <div class="animated bounceInLeft posContact col-md-6 col-lg-4 col-sm-12 col-xs-12">
+      <h2>Uh oh <%=subFirstName%> <%=subLastName%>!</h2>
+      <div class="sentStatusText">
+        <p>There was a problem signing you up. Please try again or contact the developer!</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <a style="text-decoration: none;" href="/contact"><span style="color: white;">TRY AGAIN</span></a>
+</div>
+
+<%- include("partials/footer"); -%>

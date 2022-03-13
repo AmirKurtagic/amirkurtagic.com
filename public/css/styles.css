@@ -1,0 +1,740 @@
+:root {
+    --silverCol: rgb(255, 255, 255, .5);
+    --witheCol: white;
+    --marginFooter: 0 22.5px 15px;
+    --marginFooterMobile: 0 18px 15px;
+    --marginButtonTxtEx: 20px;
+    --marginButton: 40px;
+    --marginButtonP: 10px;
+}
+
+body {
+  background-color: black;
+  padding: 0 !important;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.HeaderHomeText .HeaderTittle {
+  font-size: 47px;
+  font-weight: 900;
+}
+
+.HeaderHomeText .HeaderSubTittle {
+  font-size: 23.5px;
+}
+
+hr {
+  border: 1px groove var(--silverCol);
+  border-bottom: none;
+  width: 30%;
+  margin: 10px auto 40px;
+}
+
+.galLnTop {
+  margin: 10px auto 0;
+}
+
+p {
+  color: var(--silverCol);
+}
+
+.HeaderHomeText {
+  z-index: 100;
+  color: white;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+/********** NavBar ***********/
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.dropdown-item:hover {
+  color: #aaaaaa;
+  background-color: transparent;
+}
+
+.dropdown-menu a {
+  color: #3f3f44;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/********** Footer ***********/
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 52.50px;
+  background-color: black;
+  pointer-events: none
+}
+
+.TextFooterRight {
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin: var(--marginFooter);
+  color: var(--silverCol);
+}
+
+#TextFooterP {
+  margin: 0;
+}
+
+.SocialMediaButtons {
+  right: 0;
+  bottom: 0;
+  margin: var(--marginFooter);
+  position: absolute;
+  display: inline-block;
+}
+
+.SocialMediaButtons .icons {
+  pointer-events: auto;
+  color: var(--silverCol);
+  margin-left: 15px;
+}
+
+.icons:hover {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+
+.SocialMediaButtons .fa {
+  font-size: 20px;
+}
+
+
+/******** Home ***********/
+
+.BackgroundImg img {
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  object-fit: cover;
+  vertical-align: bottom;
+  top: 0;
+}
+
+.BackgroundImg {
+  display: inline-block !important;
+  vertical-align: bottom !important;
+  min-height: 1px !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
+
+.HeaderText {
+  font-size: 23px;
+  color: var(--witheCol);
+  width: 100%;
+  margin: 55px 0 0;
+  text-align: center;
+}
+
+#aboutPic {
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.txtAbout {
+  margin-bottom:var(--marginButtonTxtEx);
+}
+
+/*********** Contact ***********/
+
+#contact {
+  text-align: center;
+}
+
+.posContact h2 {
+  margin: 0;
+}
+
+.posContact {
+  margin: auto;
+}
+
+.btn {
+  background-color: #3f3f44;
+  width: 50%;
+  opacity: 0.8;
+}
+
+.contact-form-area {
+  padding: 0 4%;
+}
+
+.form-control {
+  background-color: #3f3f44;
+  color: var(--witheCol);
+  border: none;
+}
+
+.form-group ::placeholder {
+  color: var(--witheCol);
+  opacity: 0.3;
+}
+
+.posContact p {
+  margin-bottom: var(--marginButtonTxtEx);
+  padding: 0 4%;
+  text-align: left;
+}
+
+.posContact h2 {
+  margin-bottom: 10px;
+  color: var(--witheCol);
+  font-size: 25px;
+}
+
+.form-signin {
+  margin: 40px 0 60px;
+}
+
+#openMod {
+  text-decoration: none;
+  -webkit-text-decoration-color: var(--witheCol);   /* Safari */
+  text-decoration-color: var(--witheCol);
+  color: var(--witheCol);
+  cursor: pointer;
+    padding: 0 !important;
+}
+
+.subInput {
+  text-align: left;
+  border: 1px solid #3f3f44;
+  color: black;
+  background-color: transparent !important;
+}
+
+.subInput:focus {
+  box-shadow: none;
+  border: 1px solid var(--silverCol);
+}
+
+.form-signin h5 {
+  text-align: left;
+  color: var(--witheCol);
+  padding: 0 4%;
+}
+
+.subInput::placeholder {
+  color: black;
+}
+
+/* The Modal (background) */
+#contactDiv .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+#contactDiv .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+/* The Close Button */
+#contactDiv .close {
+  color: #aaaaaa;
+  text-align: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#contactDiv .close:hover,
+#contactDiv .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*fix the padding problem*/
+#myModal {
+  padding: 0 !important;
+}
+
+
+/*********** Subscribed/emailsent/emailerror/Subscribederror/emailerror  ***********/
+.sentStatusText p {
+  text-align: center;
+  margin: 0;
+}
+
+.text-center hr {
+  margin: 40px auto 10px;
+}
+
+.text-center a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--witheCol); /* Safari */
+  text-decoration-color: var(--witheCol);
+}
+
+/*********** Press ***********/
+.galPress {
+  margin: 0 auto 10px;
+}
+
+.card {
+  background-color: transparent;
+  padding-bottom: 40px;
+  border: 0;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-text {
+  color: var(--witheCol);
+  text-align: center;
+  padding-top: 5px;
+}
+
+.card-text p {
+  margin: 0;
+}
+
+#pressCardBody:hover {
+  opacity: 0.7;
+}
+
+.pressImg {
+  padding-bottom: 66.66%;
+  background-color: transparent;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.pressImg img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+#pressUl {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#pressUl li {
+  list-style-type: none;
+}
+
+#more {
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+  margin: auto;
+  display: block;
+  color: var(--silverCol);
+  margin-bottom: 60px;
+}
+
+#more:hover {
+  color: #aaaaaa;
+}
+
+#pressUl li:nth-child(n+7) {
+  display: none;
+}
+
+/*********** paintings ***********/
+
+#paintUL li:nth-child(n+13) {
+  display: none;
+}
+
+#paintUL li {
+  list-style-type: none;
+}
+
+#paintUL {
+  padding: 0;
+}
+
+#HFOH #paintUL {
+  margin-bottom: 60px;
+}
+
+#liPaint {
+  padding: 0 9px 0 9px;
+}
+
+#imgPaintDiv {
+  padding-bottom: 100%;
+  object-fit: scale-down;
+  cursor: pointer;
+}
+
+#imgPaintDiv:hover #imgPaint {
+  -ms-transform: scale(1.15); /* IE 9 */
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15); /* Safari 3-8 */
+  transform: scale(1.15);
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 0.5;
+  object-fit: scale-down;
+}
+
+#imgPaintDiv:hover .img__description {
+  z-index: 1;
+  opacity: 1;
+}
+
+.img__description {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.descrPaint {
+  margin: 0;
+  font-size: 12px;
+  color: #e7e6e1;
+}
+
+.descrName {
+  margin-bottom: 10px;
+  color: var(--witheCol);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.rowCollPaint {
+  width: 100%;
+  text-align: center;
+}
+
+.btnPaint {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.posTog {
+  margin: auto;
+}
+
+#navHeaderPaint .HeaderText {
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+}
+
+#navHeaderPaint .navbar {
+  padding: 0;
+}
+
+#navHeaderPaint .navbar-nav {
+  margin: auto;
+}
+
+#dropDownPaint .dropdown-item {
+  text-align: center;
+}
+
+/****Modal-Painting******/
+
+
+
+.modal-dialog {
+  margin: 1.75rem auto;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+#modalPaintDiv .PaintClassImg {
+  max-width: 100%;
+  max-height: 690px;
+}
+
+#modalPaintDiv .modal-content {
+  text-align: center;
+  background-color: black;
+  border: 7px solid;
+}
+
+#modalPaintDiv .modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem;
+  padding: 0 10px ;
+}
+
+.shareBtnTittle .fa-times {
+  font-size: 13px;
+}
+
+.shareBtnTittle .btn-sm {
+  height: 25px;
+}
+
+.newTabImg {
+  width: 50px;
+  border-radius: 15px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  outline:none;
+  width:35px;
+  padding: 2px;
+}
+
+#modalPaintDiv .modal-header {
+  padding: 0;
+  border-bottom: 0;
+}
+
+#modalPaintDiv .modal-title {
+  color: var(--witheCol);
+  margin: auto;
+  margin: 7.5px 0 7.5px ;
+  height: 25px;
+}
+
+#modalPaintDiv .btnTop {
+  display: inline;
+}
+
+.modal:nth-of-type(even) {
+  z-index: 1052 !important;
+}
+
+.modal-backdrop.show:nth-of-type(even) {
+  z-index: 1051 !important;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+#staticBackdrop .modal-header {
+  margin: auto;
+}
+
+#staticBackdrop .modal-footer {
+  margin: auto;
+}
+
+#staticBackdrop .modalBody {
+  text-align: center;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+  overflow-y: auto !important;
+}
+
+/****Share-Buttons + Zoom-Button + Close-Button in Paint-Modal******/
+
+#staticBackdrop .modal-header {
+  padding: 20px;
+}
+
+.closeBtnShare {
+  padding: 20px;
+}
+
+#staticBackdrop .modal-header {
+  border-bottom: 0;
+}
+
+.shareBtnTop .shareBtnTop a {
+  margin: 0 6px;
+}
+
+.shareBtnTop .fa-facebook:hover {
+  color: #3b5999;
+}
+
+.shareBtnTop .fa-twitter:hover {
+  color: #55acee;
+}
+
+.shareBtnTop .fa-viber:hover {
+  color: #665cac;
+}
+
+.shareBtnTop .fa-whatsapp:hover {
+  color: #25D366;
+}
+
+.shareBtnTop .fa-pinterest:hover {
+  color: #bd081c;
+}
+
+.shareBtnTop .icons {
+  margin: 0 5px;
+}
+
+#modalPaintDiv .fa-times {
+  font-size: 13px;
+}
+
+.shareBtnTittle .fa-share-alt {
+  font-size: 13px;
+}
+
+.btnTop .btn {
+  position: relative;
+}
+
+.modal-title {
+  font-size: 16px;
+}
+
+.modal-header h4 {
+  margin: 0;
+}
+
+.shareBtnTop {
+  text-align: center;
+}
+
+.shareBtnTittle {
+  text-align: center;
+  margin: 7.5px;
+}
+
+.DropMenu .navbar-expand-sm .navbar-nav .dropdown-menu {
+    position: static;
+}
+
+/*********** exhibitions ***********/
+
+.exhTxt {
+  text-align: left;
+}
+
+.exhTxt .exhHeader {
+  padding: 0 4%;
+}
+
+.exhHeader {
+color: var(--witheCol);
+font-size: 18px;
+}
+
+.exhTxt .exhP {
+  margin-bottom: 10px;
+}
+
+.exhTxt .tittleBoxEx {
+  margin-bottom: var(--marginButtonP);
+}
+
+.exhTxt .txtBoxEx {
+  margin-bottom: var(--marginButton);
+}
+
+.exhTxt .pBoxEx {
+  margin-bottom: var(--marginButtonP);
+}
+
+/******** logo-img **********/
+
+.imgLogo {
+  width: 300px;
+}
+
+/*********** Screen ***********/
+
+
+@media only screen and (min-width: 600px) {
+
+  #modalPaintDiv .modal-dialog {
+    max-width: inherit;
+  }
+}
+
+@media only screen {
+  .navbar .nav-item:hover .nav-link {
+    color: #aaaaaa;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+  .HeaderHomeText {
+    width: 100%;
+    right: 0%;
+    top: 70%;
+  }
+  h2 {
+    font-size: 17.5px;
+    text-align: center;
+  }
+  #paintUL {padding: 0 9px;}
+  .navbar-nav {background-color: black;}
+  .nav-link {margin-left: 12px;}
+
+  .TextFooterRight,
+  .SocialMediaButtons {
+    margin: var(--marginFooterMobile);
+  }
+  .navbar-toggler {
+    background-color: black;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  h1 {font-size: 37px;}
+  h2 {font-size: 18.5px;}
+}

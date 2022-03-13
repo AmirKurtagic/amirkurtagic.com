@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+
+<%tittleTemp = "Random Inspiration";%>
+<%pageTemp = "/random-inspiration";%>
+<%listName = "LRI";%>
+
+<%- include("dropDownPaintings"); -%>
+
+<div class="">
+  <div class="container">
+
+    <div class="">
+      <%templateArray=randomInspiration;%>
+      <ul id="paintUL" class="paintSpec row">
+        <% templateArray.sort(function() { %>
+        <% return (Math.random()-0.5);%>
+        <% }); %>
+        <%- include("paintingsArray"); -%>
+        <%- include("functionShowMore"); -%>
+        <script>
+          const postTitle = encodeURI("Random Inspiration");
+        </script>
+        <%- include("shareModal"); -%>
+    </div>
+  </div>
+  <hr class="galPress"> 
+  <span id="more">View All</span>
+</div>
+<%- include("partials/footer"); -%>

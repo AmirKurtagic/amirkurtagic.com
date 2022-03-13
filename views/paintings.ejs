@@ -1,0 +1,26 @@
+<%- include("partials/header"); -%>
+
+<%tittleTemp = "Paintings";%>
+<%pageTemp = "/paintings";%>
+
+<%- include("dropDownPaintings"); -%>
+
+<div class="">
+  <div class="container">
+    <div class="">
+      <%templateArray=paintingsAll;%>
+      <ul id="paintUL" class="paintSpec row">
+        <% templateArray.sort(function() { %>
+        <% return (Math.random()-0.5);%>
+        <% }); %>
+        <%- include("paintingsArray"); -%>
+        <%- include("functionShowMore"); -%>
+    </div>
+  </div>
+
+  <hr style="margin: 40px auto 10px">
+  <span id="more">View All</span>
+
+</div>
+
+<%- include("partials/footer"); -%>

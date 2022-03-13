@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+
+<%tittleTemp = "The Rooftops of Sarajevo";%>
+<%pageTemp = "/the-rooftops-of-sarajevo";%>
+<%listName = "LTROS";%>
+
+<%- include("dropDownPaintings"); -%>
+<div class="">
+  <div class="container">
+    <div class="">
+      <%templateArray=theRooftopsOfSarajevo;%>
+      <ul id="paintUL" class="paintSpec row">
+        <%  templateArray.sort(function(a, b) { %>
+        <%  return parseFloat(a.number) - parseFloat(b.number); %>
+        <% }); %>
+        <%- include("paintingsArray"); -%>
+        <%- include("functionShowMore"); -%>
+        <script>
+          const postTitle = encodeURI("The Rooftops of Sarajevo");
+        </script>
+        <%- include("shareModal"); -%>
+    </div>
+  </div>
+  <hr class="galPress">
+  <span id="more">View All</span>
+</div>
+<%- include("partials/footer"); -%>

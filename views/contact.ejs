@@ -1,0 +1,83 @@
+<%- include("partials/header"); -%>
+
+<h1 class="HeaderText">Contact</h1>
+<hr>
+<div class="text-center">
+  <div class="row">
+    <div class="animated bounceInLeft posContact col-md-6 col-lg-4 col-sm-12">
+      <h2>Hi!</h2>
+      <p>If you have any questions, please do not hesitate to contact me at
+        <span style="color: white;">kurtagicart@gmail.com</span> or send a message here.
+      </p>
+      <div class=" contact-form-area">
+        <form action="/contact" method="POST">
+          <div class="form-group">
+            <input type="text" name="fName" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="2" name="message" placeholder="Message" required></textarea>
+          </div>
+          <button type="submit" value="send" class="btn btn-secondary contact-btn">SEND</button>
+        </form>
+      </div>
+
+
+      <div class="form-signin">
+        <form action="/subscribe" method="POST">
+          <h5>Subscribe to my mailing list!</h5>
+          <p><a id=openMod>CLICK HERE</a> and enter your details, if you'd like to stay informed about my latest projects,
+            paintings and upcoming exhibitions.</p>
+          <p>We respect your privacy.</p>
+
+            <div id="contactDiv">
+              <div class="modal" id="myModal">
+                  <div class="animated bounceInDown modal-dialog posContact col-md-6 col-lg-4 col-sm-12">
+                    <div class="modal-content" style="max-width:100%;">
+                      <a class="close">&times;</a>
+                      <div class="form-group">
+                        <input type="text" name="subFirstName" class="subInput form-control" placeholder="First Name" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="subLastName" class="subInput form-control" placeholder="Last Name" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="subEmail" class="subInput form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" value="Subscribe" class="btn btn-secondary contact-btn">SUBSCRIBE</button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>
+
+      <script>
+        var modal = document.getElementById("myModal");
+        var openModal = document.getElementById("openMod");
+        var closeModal = document.getElementsByClassName("close")[0];
+        openModal.onclick = function() {
+          modal.style.display = "block";
+        }
+        closeModal.onclick = function() {
+          modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer"); -%>

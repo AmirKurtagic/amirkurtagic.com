@@ -1,0 +1,64 @@
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>"<span style="font-weight: bold;"><%=tittleTemp%></span>"</h4>
+      </div>
+      <div class="modalBody">
+        <div class="shareBtnTop">
+          <a href="#" id="viberBtn" class="icons fab fa-viber fa-3x" target="_blank" rel="noopener noreferrer"></a>
+          <a href="#" class="icons fab fa-facebook fa-3x" target="_blank" rel="noopener noreferrer"></a>
+          <a href="#" class="icons fab fa-twitter fa-3x" target="_blank" rel="noopener noreferrer"></a>
+          <a href="#" class="icons fab fa-whatsapp fa-3x" target="_blank" rel="noopener noreferrer"></a>
+          <a href="#" class="icons fab fa-pinterest fa-3x" target="_blank" rel="noopener noreferrer"></a>
+          <a href="#" class="icons fas fa-envelope fa-3x" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+
+        <div class="closeBtnShare">
+          <button id="closeBtn" type="button" class="btn btn-secondary " data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const facebookBtn = document.querySelector(".fa-facebook");
+  const twitterBtn = document.querySelector(".fa-twitter");
+  const printerestBtn = document.querySelector(".fa-pinterest");
+  const whatsappBtn = document.querySelector(".fa-whatsapp");
+  const emailBtn = document.querySelector(".fa-envelope");
+  const viberBtn = document.querySelector(".fa-viber");
+
+  function init() {
+    const pinterestImg = document.querySelector(".PaintClassImg")
+    let postUrl = encodeURI(document.location.href);
+    let postImg = encodeURI(pinterestImg.src);
+
+    facebookBtn.setAttribute(
+      "href",
+      `https://www.facebook.com/sharer.php?u=${postUrl}&text=${postTitle}`);
+
+    twitterBtn.setAttribute(
+      "href",
+      `https://twitter.com/share?url=${postUrl}&text=${postTitle}`);
+
+    printerestBtn.setAttribute(
+      "href",
+      `https://pinterest.com/pin/create/bookmarklet/?url=${postUrl}&description=${postTitle}`);
+
+    whatsappBtn.setAttribute(
+      "href",
+      `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`);
+
+    viberBtn.setAttribute(
+      "href",
+      `viber://forward?text=${postTitle} ${postUrl}`);
+
+    emailBtn.setAttribute(
+      "href",
+      `mailto:?subject=${postTitle}&body=${postUrl}`);
+  }
+  init();
+</script>

@@ -1,0 +1,55 @@
+<%- include("partials/header"); -%>
+
+<h1 class="HeaderText">Selected Press</h1>
+<hr>
+<div class="animated bounceInLeft">
+  <div class="container">
+    <div class="">
+      <ul id="pressUl" class=" row">
+
+        <% presses.sort(function (a, b) { %>
+        <% return a.ranking - b.ranking;%>
+        <% }); %>
+
+        <% presses.forEach(function(press) { %>
+
+        <li class="col-md-3 col-lg-2 col-sm-4 col-6">
+          <div class="card">
+            <a style="text-decoration: none;" href="<%=press.link%>" target="_blank" rel="noopener noreferrer">
+              <div id="pressCardBody" class="card-body">
+                <div class="pressImg">
+                  <img src="<%=press.img%>" alt="">
+                </div>
+                <div class="card-text">
+                  <p class="card-text"><%=press.name%></p>
+                  <p style="font-size: 13px"><%=press.published%></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <%});%>
+      </ul>
+
+      <script>
+        $(function() {
+          $("#more").click(function() {
+            if ($("#pressUl li").length != $("#pressUl li:visible").length) {
+              $("#pressUl li:hidden").show();
+              $("#more").html("View Less");
+            } else if ($("#pressUl li").length == $("#pressUl li:visible").length) {
+              $("#more").html("View More");
+              $("#pressUl li:visible").slice(6).hide();
+            }
+          });
+        });
+      </script>
+
+    </div>
+
+  </div>
+  <hr class="galPress">
+  <span id="more">View More</span>
+</div>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,61 @@
+<% templateArray.forEach(function(painting) { %>
+
+<li id="liPaint" class="animated bounceInLeft col-md-3 col-lg-2 col-sm-4 col-6 ">
+  <div class="PaintCard card">
+    <div class="card-body">
+      <div id="imgPaintDiv" class="pressImg">
+        <a href="<%=painting.img%>" class="thumbnail" data-toggle="modal" data-target="#myModal" data-name="<%=painting.name%>">
+          <img class="PaintClassImg" id="imgPaint" src="<%=painting.img%>" alt="Paintings">
+          <div class="img__description">
+            <h2 class="descrName"> <%=painting.name%> </h2>
+            <p class="descrPaint"> <%=painting.dimenstions%> </p>
+            <p class="descrPaint"> <%=painting.technique%> </p>
+            <p class="descrPaint"> <%=painting.createdYear%> </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</li>
+<%});%>
+</ul>
+
+<div id="modalPaintDiv">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="btnTop">
+          <div class="shareBtnTittle">
+            <div class="btnTop">
+              <button type="button" class="btnShare btn btn-secondary btn-sm newTabImg" data-dismiss="modal" aria-label="Close" >
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-body">
+        </div>
+        <h5 class="modal-title"></h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('.thumbnail').click(function() {
+      $('#myModal').find('.modal-title').text($(this).data('name'));
+
+      var imgLink = $(this).attr("href");
+      $('.newTabImg').click(function() {
+        $('#myModal').find('.newTabImg').attr("href", imgLink);
+      });
+
+      $('.modal-body').empty();
+      var title = $(this).parent('a').attr("title");
+      $($(this).parents('div').html()).appendTo('.modal-body');
+      $('#myModal').modal('show');
+    });
+  });
+</script>

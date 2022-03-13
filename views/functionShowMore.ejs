@@ -1,0 +1,13 @@
+<script>
+  $(function() {
+    $("#more").click(function() {
+      if ($("#paintUL li").length != $("#paintUL li:visible").length) {
+        $("#paintUL li:hidden").show();
+        $("#more").html("View Less");
+      } else if ($("#paintUL li").length == $("#paintUL li:visible").length) {
+        $("#more").html("View All");
+        $("#paintUL li:visible").slice(12).hide("slow");
+      }
+    });
+  });
+</script>
